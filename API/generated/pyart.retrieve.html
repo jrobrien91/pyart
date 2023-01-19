@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>pyart.retrieve &#8212; Py-ART 1.11.6.post245 documentation</title>
+    <title>pyart.retrieve &#8212; Py-ART 1.11.6.post280 documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -310,6 +310,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="pyart.core.Radar.add_field_like.html">
        pyart.core.Radar.add_field_like
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.core.Radar.add_filter.html">
+       pyart.core.Radar.add_filter
       </a>
      </li>
      <li class="toctree-l3">
@@ -1251,6 +1256,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="pyart.retrieve.conv_strat_yuter.html">
+     pyart.retrieve.conv_strat_yuter
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="pyart.retrieve.dealias_spectra.html">
      pyart.retrieve.dealias_spectra
     </a>
@@ -1582,6 +1592,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="pyart.graph.GridMapDisplay.plot_colorbar.html">
        pyart.graph.GridMapDisplay.plot_colorbar
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.graph.GridMapDisplay.plot_cross_section.html">
+       pyart.graph.GridMapDisplay.plot_cross_section
       </a>
      </li>
      <li class="toctree-l3">
@@ -2189,6 +2204,11 @@
      </li>
     </ul>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyart.graph.plot_convstrat_scheme.html">
+     pyart.graph.plot_convstrat_scheme
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -2770,11 +2790,68 @@
   </label>
   <ul>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="pyart.testing.InTemporaryDirectory.html">
-     pyart.testing.InTemporaryDirectory
+    <a class="reference internal" href="pyart.testing.Grid.html">
+     pyart.testing.Grid
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/>
     <label for="toctree-checkbox-30">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Grid.add_field.html">
+       pyart.testing.Grid.add_field
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Grid.get_point_longitude_latitude.html">
+       pyart.testing.Grid.get_point_longitude_latitude
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Grid.get_projparams.html">
+       pyart.testing.Grid.get_projparams
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Grid.init_point_altitude.html">
+       pyart.testing.Grid.init_point_altitude
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Grid.init_point_longitude_latitude.html">
+       pyart.testing.Grid.init_point_longitude_latitude
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Grid.init_point_x_y_z.html">
+       pyart.testing.Grid.init_point_x_y_z
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Grid.to_xarray.html">
+       pyart.testing.Grid.to_xarray
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Grid.write.html">
+       pyart.testing.Grid.write
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Grid.projection_proj.html">
+       pyart.testing.Grid.projection_proj
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="pyart.testing.InTemporaryDirectory.html">
+     pyart.testing.InTemporaryDirectory
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/>
+    <label for="toctree-checkbox-31">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -2785,6 +2862,395 @@
       </a>
      </li>
     </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="pyart.testing.Radar.html">
+     pyart.testing.Radar
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/>
+    <label for="toctree-checkbox-32">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.add_field.html">
+       pyart.testing.Radar.add_field
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.add_field_like.html">
+       pyart.testing.Radar.add_field_like
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.add_filter.html">
+       pyart.testing.Radar.add_filter
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.check_field_exists.html">
+       pyart.testing.Radar.check_field_exists
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.extract_sweeps.html">
+       pyart.testing.Radar.extract_sweeps
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.get_azimuth.html">
+       pyart.testing.Radar.get_azimuth
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.get_elevation.html">
+       pyart.testing.Radar.get_elevation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.get_end.html">
+       pyart.testing.Radar.get_end
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.get_field.html">
+       pyart.testing.Radar.get_field
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.get_gate_area.html">
+       pyart.testing.Radar.get_gate_area
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.get_gate_lat_lon_alt.html">
+       pyart.testing.Radar.get_gate_lat_lon_alt
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.get_gate_x_y_z.html">
+       pyart.testing.Radar.get_gate_x_y_z
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.get_nyquist_vel.html">
+       pyart.testing.Radar.get_nyquist_vel
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.get_slice.html">
+       pyart.testing.Radar.get_slice
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.get_start.html">
+       pyart.testing.Radar.get_start
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.get_start_end.html">
+       pyart.testing.Radar.get_start_end
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.info.html">
+       pyart.testing.Radar.info
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.init_gate_altitude.html">
+       pyart.testing.Radar.init_gate_altitude
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.init_gate_longitude_latitude.html">
+       pyart.testing.Radar.init_gate_longitude_latitude
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.init_gate_x_y_z.html">
+       pyart.testing.Radar.init_gate_x_y_z
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.init_rays_per_sweep.html">
+       pyart.testing.Radar.init_rays_per_sweep
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.iter_azimuth.html">
+       pyart.testing.Radar.iter_azimuth
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.iter_elevation.html">
+       pyart.testing.Radar.iter_elevation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.iter_end.html">
+       pyart.testing.Radar.iter_end
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.iter_field.html">
+       pyart.testing.Radar.iter_field
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.iter_slice.html">
+       pyart.testing.Radar.iter_slice
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.iter_start.html">
+       pyart.testing.Radar.iter_start
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.Radar.iter_start_end.html">
+       pyart.testing.Radar.iter_start_end
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="pyart.testing.RadarSpectra.html">
+     pyart.testing.RadarSpectra
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/>
+    <label for="toctree-checkbox-33">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.check_field_exists.html">
+       pyart.testing.RadarSpectra.check_field_exists
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.get_end.html">
+       pyart.testing.RadarSpectra.get_end
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.get_slice.html">
+       pyart.testing.RadarSpectra.get_slice
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.get_start.html">
+       pyart.testing.RadarSpectra.get_start
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.get_start_end.html">
+       pyart.testing.RadarSpectra.get_start_end
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.init_gate_altitude.html">
+       pyart.testing.RadarSpectra.init_gate_altitude
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.init_gate_longitude_latitude.html">
+       pyart.testing.RadarSpectra.init_gate_longitude_latitude
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.init_gate_x_y_z.html">
+       pyart.testing.RadarSpectra.init_gate_x_y_z
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.init_rays_per_sweep.html">
+       pyart.testing.RadarSpectra.init_rays_per_sweep
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.iter_azimuth.html">
+       pyart.testing.RadarSpectra.iter_azimuth
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.iter_elevation.html">
+       pyart.testing.RadarSpectra.iter_elevation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.iter_end.html">
+       pyart.testing.RadarSpectra.iter_end
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.iter_field.html">
+       pyart.testing.RadarSpectra.iter_field
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.iter_slice.html">
+       pyart.testing.RadarSpectra.iter_slice
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.iter_start.html">
+       pyart.testing.RadarSpectra.iter_start
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.iter_start_end.html">
+       pyart.testing.RadarSpectra.iter_start_end
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.to_vpt.html">
+       pyart.testing.RadarSpectra.to_vpt
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.altitude.html">
+       pyart.testing.RadarSpectra.altitude
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.azimuth.html">
+       pyart.testing.RadarSpectra.azimuth
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.elevation.html">
+       pyart.testing.RadarSpectra.elevation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.fields.html">
+       pyart.testing.RadarSpectra.fields
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.fixed_angle.html">
+       pyart.testing.RadarSpectra.fixed_angle
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.gate_altitude.html">
+       pyart.testing.RadarSpectra.gate_altitude
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.gate_latitude.html">
+       pyart.testing.RadarSpectra.gate_latitude
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.gate_longitude.html">
+       pyart.testing.RadarSpectra.gate_longitude
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.gate_x.html">
+       pyart.testing.RadarSpectra.gate_x
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.gate_y.html">
+       pyart.testing.RadarSpectra.gate_y
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.gate_z.html">
+       pyart.testing.RadarSpectra.gate_z
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.latitude.html">
+       pyart.testing.RadarSpectra.latitude
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.longitude.html">
+       pyart.testing.RadarSpectra.longitude
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.ngates.html">
+       pyart.testing.RadarSpectra.ngates
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.npulses_max.html">
+       pyart.testing.RadarSpectra.npulses_max
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.nrays.html">
+       pyart.testing.RadarSpectra.nrays
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.nsweeps.html">
+       pyart.testing.RadarSpectra.nsweeps
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.projection.html">
+       pyart.testing.RadarSpectra.projection
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.range.html">
+       pyart.testing.RadarSpectra.range
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.rays_per_sweep.html">
+       pyart.testing.RadarSpectra.rays_per_sweep
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.scan_type.html">
+       pyart.testing.RadarSpectra.scan_type
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.sweep_end_ray_index.html">
+       pyart.testing.RadarSpectra.sweep_end_ray_index
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.sweep_mode.html">
+       pyart.testing.RadarSpectra.sweep_mode
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.sweep_number.html">
+       pyart.testing.RadarSpectra.sweep_number
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.sweep_start_ray_index.html">
+       pyart.testing.RadarSpectra.sweep_start_ray_index
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.time.html">
+       pyart.testing.RadarSpectra.time
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyart.testing.RadarSpectra.velocity_bins.html">
+       pyart.testing.RadarSpectra.velocity_bins
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyart.testing.get_metadata.html">
+     pyart.testing.get_metadata
+    </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="pyart.testing.get_test_data.html">
@@ -2928,73 +3394,76 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.compute_snr.html#pyart.retrieve.compute_snr" title="pyart.retrieve.compute_snr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_snr</span></code></a>(radar[, refl_field, ...])</p></td>
 <td><p>Computes SNR from a reflectivity field and the noise in dBZ.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.dealias_spectra.html#pyart.retrieve.dealias_spectra" title="pyart.retrieve.dealias_spectra"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dealias_spectra</span></code></a>(the_spectra, vel_bins, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.conv_strat_yuter.html#pyart.retrieve.conv_strat_yuter" title="pyart.retrieve.conv_strat_yuter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">conv_strat_yuter</span></code></a>(grid[, dx, dy, level_m, ...])</p></td>
+<td><p>Partition reflectivity into convective-stratiform using the Yuter et al. (2005) and Yuter and Houze (1997) algorithm.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.dealias_spectra.html#pyart.retrieve.dealias_spectra" title="pyart.retrieve.dealias_spectra"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dealias_spectra</span></code></a>(the_spectra, vel_bins, ...)</p></td>
 <td><p>Dealias a spectra.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.est_rain_rate_a.html#pyart.retrieve.est_rain_rate_a" title="pyart.retrieve.est_rain_rate_a"><code class="xref py py-obj docutils literal notranslate"><span class="pre">est_rain_rate_a</span></code></a>(radar[, alpha, beta, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.est_rain_rate_a.html#pyart.retrieve.est_rain_rate_a" title="pyart.retrieve.est_rain_rate_a"><code class="xref py py-obj docutils literal notranslate"><span class="pre">est_rain_rate_a</span></code></a>(radar[, alpha, beta, ...])</p></td>
 <td><p>Estimates rainfall rate from specific attenuation using alpha power law.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.est_rain_rate_hydro.html#pyart.retrieve.est_rain_rate_hydro" title="pyart.retrieve.est_rain_rate_hydro"><code class="xref py py-obj docutils literal notranslate"><span class="pre">est_rain_rate_hydro</span></code></a>(radar[, alphazr, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.est_rain_rate_hydro.html#pyart.retrieve.est_rain_rate_hydro" title="pyart.retrieve.est_rain_rate_hydro"><code class="xref py py-obj docutils literal notranslate"><span class="pre">est_rain_rate_hydro</span></code></a>(radar[, alphazr, ...])</p></td>
 <td><p>Estimates rainfall rate using different relations between R and the polarimetric variables depending on the hydrometeor type.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.est_rain_rate_kdp.html#pyart.retrieve.est_rain_rate_kdp" title="pyart.retrieve.est_rain_rate_kdp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">est_rain_rate_kdp</span></code></a>(radar[, alpha, beta, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.est_rain_rate_kdp.html#pyart.retrieve.est_rain_rate_kdp" title="pyart.retrieve.est_rain_rate_kdp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">est_rain_rate_kdp</span></code></a>(radar[, alpha, beta, ...])</p></td>
 <td><p>Estimates rainfall rate from kdp using alpha power law.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.est_rain_rate_z.html#pyart.retrieve.est_rain_rate_z" title="pyart.retrieve.est_rain_rate_z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">est_rain_rate_z</span></code></a>(radar[, alpha, beta, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.est_rain_rate_z.html#pyart.retrieve.est_rain_rate_z" title="pyart.retrieve.est_rain_rate_z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">est_rain_rate_z</span></code></a>(radar[, alpha, beta, ...])</p></td>
 <td><p>Estimates rainfall rate from reflectivity using a power law.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.est_rain_rate_za.html#pyart.retrieve.est_rain_rate_za" title="pyart.retrieve.est_rain_rate_za"><code class="xref py py-obj docutils literal notranslate"><span class="pre">est_rain_rate_za</span></code></a>(radar[, alphaz, betaz, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.est_rain_rate_za.html#pyart.retrieve.est_rain_rate_za" title="pyart.retrieve.est_rain_rate_za"><code class="xref py py-obj docutils literal notranslate"><span class="pre">est_rain_rate_za</span></code></a>(radar[, alphaz, betaz, ...])</p></td>
 <td><p>Estimates rainfall rate from a blending of power law r-alpha and r-z relations.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.est_rain_rate_zkdp.html#pyart.retrieve.est_rain_rate_zkdp" title="pyart.retrieve.est_rain_rate_zkdp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">est_rain_rate_zkdp</span></code></a>(radar[, alphaz, betaz, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.est_rain_rate_zkdp.html#pyart.retrieve.est_rain_rate_zkdp" title="pyart.retrieve.est_rain_rate_zkdp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">est_rain_rate_zkdp</span></code></a>(radar[, alphaz, betaz, ...])</p></td>
 <td><p>Estimates rainfall rate from a blending of power law r-kdp and r-z relations.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.est_rain_rate_zpoly.html#pyart.retrieve.est_rain_rate_zpoly" title="pyart.retrieve.est_rain_rate_zpoly"><code class="xref py py-obj docutils literal notranslate"><span class="pre">est_rain_rate_zpoly</span></code></a>(radar[, refl_field, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.est_rain_rate_zpoly.html#pyart.retrieve.est_rain_rate_zpoly" title="pyart.retrieve.est_rain_rate_zpoly"><code class="xref py py-obj docutils literal notranslate"><span class="pre">est_rain_rate_zpoly</span></code></a>(radar[, refl_field, ...])</p></td>
 <td><p>Estimates rainfall rate from reflectivity using a polynomial Z-R relation developed at McGill University.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.fetch_radar_time_profile.html#pyart.retrieve.fetch_radar_time_profile" title="pyart.retrieve.fetch_radar_time_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fetch_radar_time_profile</span></code></a>(sonde_dset, radar)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.fetch_radar_time_profile.html#pyart.retrieve.fetch_radar_time_profile" title="pyart.retrieve.fetch_radar_time_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fetch_radar_time_profile</span></code></a>(sonde_dset, radar)</p></td>
 <td><p>Extract the correct profile from a interpolated sonde.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.get_freq_band.html#pyart.retrieve.get_freq_band" title="pyart.retrieve.get_freq_band"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_freq_band</span></code></a>(freq)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.get_freq_band.html#pyart.retrieve.get_freq_band" title="pyart.retrieve.get_freq_band"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_freq_band</span></code></a>(freq)</p></td>
 <td><p>Returns the frequency band name (S, C, X, ...).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.grid_displacement_pc.html#pyart.retrieve.grid_displacement_pc" title="pyart.retrieve.grid_displacement_pc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grid_displacement_pc</span></code></a>(grid1, grid2, field, level)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.grid_displacement_pc.html#pyart.retrieve.grid_displacement_pc" title="pyart.retrieve.grid_displacement_pc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grid_displacement_pc</span></code></a>(grid1, grid2, field, level)</p></td>
 <td><p>Calculate the grid displacement using phase correlation.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.grid_shift.html#pyart.retrieve.grid_shift" title="pyart.retrieve.grid_shift"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grid_shift</span></code></a>(grid, advection[, trim_edges, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.grid_shift.html#pyart.retrieve.grid_shift" title="pyart.retrieve.grid_shift"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grid_shift</span></code></a>(grid, advection[, trim_edges, ...])</p></td>
 <td><p>Shift a grid by a certain number of pixels.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.hydroclass_semisupervised.html#pyart.retrieve.hydroclass_semisupervised" title="pyart.retrieve.hydroclass_semisupervised"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hydroclass_semisupervised</span></code></a>(radar[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.hydroclass_semisupervised.html#pyart.retrieve.hydroclass_semisupervised" title="pyart.retrieve.hydroclass_semisupervised"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hydroclass_semisupervised</span></code></a>(radar[, ...])</p></td>
 <td><p>Classifies precipitation echoes following the approach by Besic et al (2016).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.kdp_maesaka.html#pyart.retrieve.kdp_maesaka" title="pyart.retrieve.kdp_maesaka"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kdp_maesaka</span></code></a>(radar[, gatefilter, method, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.kdp_maesaka.html#pyart.retrieve.kdp_maesaka" title="pyart.retrieve.kdp_maesaka"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kdp_maesaka</span></code></a>(radar[, gatefilter, method, ...])</p></td>
 <td><p>Compute the specific differential phase (KDP) from corrected (e.g., unfolded) total differential phase data based on the variational method outlined in Maesaka et al. (2012).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.kdp_schneebeli.html#pyart.retrieve.kdp_schneebeli" title="pyart.retrieve.kdp_schneebeli"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kdp_schneebeli</span></code></a>(radar[, gatefilter, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.kdp_schneebeli.html#pyart.retrieve.kdp_schneebeli" title="pyart.retrieve.kdp_schneebeli"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kdp_schneebeli</span></code></a>(radar[, gatefilter, ...])</p></td>
 <td><p>Estimates Kdp with the Kalman filter method by Schneebeli and al.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.kdp_vulpiani.html#pyart.retrieve.kdp_vulpiani" title="pyart.retrieve.kdp_vulpiani"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kdp_vulpiani</span></code></a>(radar[, gatefilter, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.kdp_vulpiani.html#pyart.retrieve.kdp_vulpiani" title="pyart.retrieve.kdp_vulpiani"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kdp_vulpiani</span></code></a>(radar[, gatefilter, ...])</p></td>
 <td><p>Estimates Kdp with the Vulpiani method for a 2D array of psidp measurements with the first dimension being the distance from radar and the second dimension being the angles (azimuths for PPI, elev for RHI).The input psidp is assumed to be pre-filtered (for ex.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.map_profile_to_gates.html#pyart.retrieve.map_profile_to_gates" title="pyart.retrieve.map_profile_to_gates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_profile_to_gates</span></code></a>(profile, heights, radar)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.map_profile_to_gates.html#pyart.retrieve.map_profile_to_gates" title="pyart.retrieve.map_profile_to_gates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_profile_to_gates</span></code></a>(profile, heights, radar)</p></td>
 <td><p>Given a profile of a variable map it to the gates of radar assuming 4/3Re.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.quasi_vertical_profile.html#pyart.retrieve.quasi_vertical_profile" title="pyart.retrieve.quasi_vertical_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quasi_vertical_profile</span></code></a>(radar[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.quasi_vertical_profile.html#pyart.retrieve.quasi_vertical_profile" title="pyart.retrieve.quasi_vertical_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quasi_vertical_profile</span></code></a>(radar[, ...])</p></td>
 <td><p>Quasi Vertical Profile.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.spectra_moments.html#pyart.retrieve.spectra_moments" title="pyart.retrieve.spectra_moments"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spectra_moments</span></code></a>(radar)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.spectra_moments.html#pyart.retrieve.spectra_moments" title="pyart.retrieve.spectra_moments"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spectra_moments</span></code></a>(radar)</p></td>
 <td><p>Retrieves the radar moments using a spectra radar object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.steiner_conv_strat.html#pyart.retrieve.steiner_conv_strat" title="pyart.retrieve.steiner_conv_strat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">steiner_conv_strat</span></code></a>(grid[, dx, dy, intense, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.steiner_conv_strat.html#pyart.retrieve.steiner_conv_strat" title="pyart.retrieve.steiner_conv_strat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">steiner_conv_strat</span></code></a>(grid[, dx, dy, intense, ...])</p></td>
 <td><p>Partition reflectivity into convective-stratiform using the Steiner et al. (1995) algorithm.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.texture_of_complex_phase.html#pyart.retrieve.texture_of_complex_phase" title="pyart.retrieve.texture_of_complex_phase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">texture_of_complex_phase</span></code></a>(radar[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.texture_of_complex_phase.html#pyart.retrieve.texture_of_complex_phase" title="pyart.retrieve.texture_of_complex_phase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">texture_of_complex_phase</span></code></a>(radar[, ...])</p></td>
 <td><p>Calculate the texture of the differential phase field.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.vad_browning.html#pyart.retrieve.vad_browning" title="pyart.retrieve.vad_browning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vad_browning</span></code></a>(radar, velocity[, z_want, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.vad_browning.html#pyart.retrieve.vad_browning" title="pyart.retrieve.vad_browning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vad_browning</span></code></a>(radar, velocity[, z_want, ...])</p></td>
 <td><p>Velocity azimuth display.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyart.retrieve.vad_michelson.html#pyart.retrieve.vad_michelson" title="pyart.retrieve.vad_michelson"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vad_michelson</span></code></a>(radar[, vel_field, z_want, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyart.retrieve.vad_michelson.html#pyart.retrieve.vad_michelson" title="pyart.retrieve.vad_michelson"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vad_michelson</span></code></a>(radar[, vel_field, z_want, ...])</p></td>
 <td><p>Velocity azimuth display.</p></td>
 </tr>
 </tbody>

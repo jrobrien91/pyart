@@ -76,9 +76,27 @@ Input/Output Examples
 Reading/writing a variety of radar data using Py-ART.
 
 
+
 .. raw:: html
 
     <div class="sphx-glr-thumbnails">
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="In this example, we will show how to read in older NEXRAD files prior to 2008 that are missing ...">
+
+.. only:: html
+
+  .. image:: /examples/io/images/thumb/sphx_glr_plot_older_nexrad_data_aws_thumb.png
+    :alt: Reading Older NEXRAD Data and Fixing Latitude and Longitude Issues
+
+  :ref:`sphx_glr_examples_io_plot_older_nexrad_data_aws.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Reading Older NEXRAD Data and Fixing Latitude and Longitude Issues</div>
+    </div>
 
 
 .. raw:: html
@@ -338,23 +356,6 @@ Plotting real world radar data with Py-ART.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Image muting reduces the visual prominence of the reflectivities within identified melting and ...">
-
-.. only:: html
-
-  .. image:: /examples/plotting/images/thumb/sphx_glr_plot_nexrad_image_muted_reflectivity_thumb.png
-    :alt: Create an image-muted reflectivity plot
-
-  :ref:`sphx_glr_examples_plotting_plot_nexrad_image_muted_reflectivity.py`
-
-.. raw:: html
-
-      <div class="sphx-glr-thumbnail-title">Create an image-muted reflectivity plot</div>
-    </div>
-
-
-.. raw:: html
-
     <div class="sphx-glr-thumbcontainer" tooltip="An example that creates a 3 panel plot of a PPI, latitude slice, and longitude slice using xarr...">
 
 .. only:: html
@@ -389,6 +390,23 @@ Plotting real world radar data with Py-ART.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Image muting reduces the visual prominence of the reflectivities within identified melting and ...">
+
+.. only:: html
+
+  .. image:: /examples/plotting/images/thumb/sphx_glr_plot_nexrad_image_muted_reflectivity_thumb.png
+    :alt: Create an image-muted reflectivity plot
+
+  :ref:`sphx_glr_examples_plotting_plot_nexrad_image_muted_reflectivity.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Create an image-muted reflectivity plot</div>
+    </div>
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="An example which creates an RHI plot of velocity using a RadarDisplay object and adding Reflect...">
 
 .. only:: html
@@ -401,6 +419,40 @@ Plotting real world radar data with Py-ART.
 .. raw:: html
 
       <div class="sphx-glr-thumbnail-title">Create an RHI plot with reflectivity contour lines from an MDV file</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This is an example of how to plot a cross section of your radar grid using the GridMapDisplay">
+
+.. only:: html
+
+  .. image:: /examples/plotting/images/thumb/sphx_glr_plot_cross_section_thumb.png
+    :alt: Plot a Cross Section from a Grid
+
+  :ref:`sphx_glr_examples_plotting_plot_cross_section.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Plot a Cross Section from a Grid</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This is an example of how to modify a colobar within a Py-ART display object.">
+
+.. only:: html
+
+  .. image:: /examples/plotting/images/thumb/sphx_glr_plot_modify_colorbar_thumb.png
+    :alt: Modify a Colorbar for your Plot
+
+  :ref:`sphx_glr_examples_plotting_plot_modify_colorbar.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Modify a Colorbar for your Plot</div>
     </div>
 
 
@@ -449,6 +501,7 @@ Retrieval Examples
 Retrievals from various radars, such as additional fields or subsets of the data.
 
 
+
 .. raw:: html
 
     <div class="sphx-glr-thumbnails">
@@ -485,6 +538,57 @@ Retrievals from various radars, such as additional fields or subsets of the data
 .. raw:: html
 
       <div class="sphx-glr-thumbnail-title">Calculate and Plot Composite Reflectivity</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Calculates a VAD and plots a vertical profile of wind">
+
+.. only:: html
+
+  .. image:: /examples/retrieve/images/thumb/sphx_glr_plot_vad_thumb.png
+    :alt: Calculate and Plot VAD profile
+
+  :ref:`sphx_glr_examples_retrieve_plot_vad.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Calculate and Plot VAD profile</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Calculates a hydrometeor classification and displays the results">
+
+.. only:: html
+
+  .. image:: /examples/retrieve/images/thumb/sphx_glr_plot_hydrometeor_thumb.png
+    :alt: Calculate and Plot hydrometeor classification
+
+  :ref:`sphx_glr_examples_retrieve_plot_hydrometeor.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Calculate and Plot hydrometeor classification</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Convective-Stratiform classification">
+
+.. only:: html
+
+  .. image:: /examples/retrieve/images/thumb/sphx_glr_plot_convective_stratiform_thumb.png
+    :alt: Convective-Stratiform classification
+
+  :ref:`sphx_glr_examples_retrieve_plot_convective_stratiform.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Convective-Stratiform classification</div>
     </div>
 
 
