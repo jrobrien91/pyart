@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>pyart.graph.plot_convstrat_scheme &#8212; Py-ART 1.11.6.post310 documentation</title>
+    <title>pyart.graph.plot_convstrat_scheme &#8212; Py-ART 1.11.6.post322 documentation</title>
   
   
   
@@ -140,7 +140,7 @@
   
   
   
-    <p class="title logo__title">Py-ART 1.11.6.post310 documentation</p>
+    <p class="title logo__title">Py-ART 1.11.6.post322 documentation</p>
   
 </a></div>
     
@@ -167,6 +167,13 @@
                     </li>
                 
 
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../examples/index.html">
+                        Example Gallery
+                      </a>
+                    </li>
+                
+
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="../index.html">
                         API Reference Manual
@@ -175,8 +182,8 @@
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../examples/index.html">
-                        Example Gallery
+                      <a class="nav-link nav-internal" href="../../dev/index.html">
+                        Developer’s Guide
                       </a>
                     </li>
                 
@@ -187,19 +194,19 @@
                       </a>
                     </li>
                 
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../blog.html">
-                        Blog
-                      </a>
-                    </li>
-                
             <div class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     More
                 </button>
                 <div class="dropdown-menu">
                     
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../blog.html">
+                        Blog
+                      </a>
+                    </li>
+                
+
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../changelog.html">
                         Changelog
@@ -321,6 +328,13 @@ document.write(`
                     </li>
                 
 
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../examples/index.html">
+                        Example Gallery
+                      </a>
+                    </li>
+                
+
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="../index.html">
                         API Reference Manual
@@ -329,8 +343,8 @@ document.write(`
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../examples/index.html">
-                        Example Gallery
+                      <a class="nav-link nav-internal" href="../../dev/index.html">
+                        Developer’s Guide
                       </a>
                     </li>
                 
@@ -341,19 +355,19 @@ document.write(`
                       </a>
                     </li>
                 
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../blog.html">
-                        Blog
-                      </a>
-                    </li>
-                
             <div class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     More
                 </button>
                 <div class="dropdown-menu">
                     
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../blog.html">
+                        Blog
+                      </a>
+                    </li>
+                
+
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../changelog.html">
                         Changelog
@@ -1133,22 +1147,17 @@ document.write(`
 <dd><p>Plots the scheme used in the convective stratiform classification</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>always_core_thres</strong> (<em>float</em>) – All values above this threshold considered to be convective</p>
-</dd>
-</dl>
-<dl class="simple">
-<dt>use_cosine<span class="classifier">bool</span></dt><dd><p>Boolean used to determine if cosine scheme should be used for identifying convective cores (True) or a scalar
-scheme (False)</p>
-</dd>
-<dt>max_diff<span class="classifier">float, optional</span></dt><dd><p>Maximum difference between background average and reflectivity in order to be classified as convective.
-“a” value in Eqn. B1 in Yuter and Houze (1997)</p>
-</dd>
-<dt>zero_diff_cos_val<span class="classifier">float, optional</span></dt><dd><p>Value where difference between background average and reflectivity is zero in the cosine function
-“b” value in Eqn. B1 in Yuter and Houze (1997)</p>
-</dd>
-<dt>use_addition<span class="classifier">bool, optional</span></dt><dd><p>Determines if a multiplier (False) or addition (True) in the scalar difference scheme should be used</p>
-</dd>
-<dt>scalar_diff<span class="classifier">float, optional</span></dt><dd><p>If using a scalar difference scheme, this value is the multiplier or addition to the background average</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>always_core_thres</strong> (<em>float</em>) – All values above this threshold considered to be convective</p></li>
+<li><p><strong>use_cosine</strong> (<em>bool</em>) – Boolean used to determine if cosine scheme should be used for identifying convective cores (True) or a scalar
+scheme (False)</p></li>
+<li><p><strong>max_diff</strong> (<em>float, optional</em>) – Maximum difference between background average and reflectivity in order to be classified as convective.
+“a” value in Eqn. B1 in Yuter and Houze (1997)</p></li>
+<li><p><strong>zero_diff_cos_val</strong> (<em>float, optional</em>) – Value where difference between background average and reflectivity is zero in the cosine function
+“b” value in Eqn. B1 in Yuter and Houze (1997)</p></li>
+<li><p><strong>use_addition</strong> (<em>bool, optional</em>) – Determines if a multiplier (False) or addition (True) in the scalar difference scheme should be used</p></li>
+<li><p><strong>scalar_diff</strong> (<em>float, optional</em>) – If using a scalar difference scheme, this value is the multiplier or addition to the background average</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
