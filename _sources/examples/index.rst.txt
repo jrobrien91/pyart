@@ -13,6 +13,9 @@ The files used in these examples are available for download_.
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 
@@ -30,6 +33,7 @@ Performing radar moment corrections in antenna (radial) coordinates.
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -65,6 +69,8 @@ Performing radar moment corrections in antenna (radial) coordinates.
     </div>
 
 
+.. thumbnail-parent-div-close
+
 .. raw:: html
 
     </div>
@@ -81,6 +87,7 @@ Reading/writing a variety of radar data using Py-ART.
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -116,6 +123,8 @@ Reading/writing a variety of radar data using Py-ART.
     </div>
 
 
+.. thumbnail-parent-div-close
+
 .. raw:: html
 
     </div>
@@ -132,6 +141,7 @@ Mapping one or multiple radars from antenna coordinates to a Cartesian grid.
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -169,6 +179,23 @@ Mapping one or multiple radars from antenna coordinates to a Cartesian grid.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Map the reflectivity field of a single PPI sweep from Antenna (polar) coordinates to a Cartesia...">
+
+.. only:: html
+
+  .. image:: /examples/mapping/images/thumb/sphx_glr_plot_grid_single_sweep_ppi_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_examples_mapping_plot_grid_single_sweep_ppi.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Map a single PPI sweep to a Cartesian grid using 2D weighting</div>
+    </div>
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Map the reflectivity field of a single radar in Antenna coordinates to another radar in Antenna...">
 
 .. only:: html
@@ -183,6 +210,8 @@ Mapping one or multiple radars from antenna coordinates to a Cartesian grid.
       <div class="sphx-glr-thumbnail-title">Compare Two Radars Using Gatemapper</div>
     </div>
 
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 
@@ -200,6 +229,7 @@ Plotting real world radar data with Py-ART.
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -490,6 +520,8 @@ Plotting real world radar data with Py-ART.
     </div>
 
 
+.. thumbnail-parent-div-close
+
 .. raw:: html
 
     </div>
@@ -506,6 +538,7 @@ Retrievals from various radars, such as additional fields or subsets of the data
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -577,6 +610,23 @@ Retrievals from various radars, such as additional fields or subsets of the data
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Creating a CFAD diagram">
+
+.. only:: html
+
+  .. image:: /examples/retrieve/images/thumb/sphx_glr_plot_cfad_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_examples_retrieve_plot_cfad.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Creating a CFAD diagram</div>
+    </div>
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Convective-Stratiform classification">
 
 .. only:: html
@@ -594,6 +644,96 @@ Retrievals from various radars, such as additional fields or subsets of the data
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Feature Detection classification">
+
+.. only:: html
+
+  .. image:: /examples/retrieve/images/thumb/sphx_glr_plot_feature_detection_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_examples_retrieve_plot_feature_detection.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Feature Detection classification</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
+    </div>
+
+
+Xradar Examples
+------------------
+
+Examples of using Xradar with Py-ART to accomplish different tasks.
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="An example which uses xradar and Py-ART to create a PPI plot of a Cfradial file.">
+
+.. only:: html
+
+  .. image:: /examples/xradar/images/thumb/sphx_glr_plot_xradar_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_examples_xradar_plot_xradar.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Plot a PPI Using Xradar and Py-ART</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="An example which uses xradar and Py-ART to grid a PPI file.">
+
+.. only:: html
+
+  .. image:: /examples/xradar/images/thumb/sphx_glr_plot_grid_xradar_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_examples_xradar_plot_grid_xradar.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Grid Data Using Xradar and Py-ART</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="An example which uses xradar and Py-ART to dealias radial velocities.">
+
+.. only:: html
+
+  .. image:: /examples/xradar/images/thumb/sphx_glr_plot_dealias_xradar_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_examples_xradar_plot_dealias_xradar.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Dealias Radial Velocities Using Xradar and Py-ART</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
     </div>
 
 
@@ -607,6 +747,7 @@ Retrievals from various radars, such as additional fields or subsets of the data
    /examples/mapping/index.rst
    /examples/plotting/index.rst
    /examples/retrieve/index.rst
+   /examples/xradar/index.rst
 
 
 .. only:: html
