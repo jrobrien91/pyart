@@ -30,8 +30,9 @@ precipitation features are deemphasized using a gray scale and the regions
 with just snow and just rain are depicted in a corresponding full-color scale.
 The ultimate utility of image muting radar reflectivity is to reduce the misinterpretation
 of regions of melting or mixed precipitation as opposed to heavy snow or heavy rain.
+See Tomkins et al. (2022) for full details.
 
-.. GENERATED FROM PYTHON SOURCE LINES 16-68
+.. GENERATED FROM PYTHON SOURCE LINES 17-72
 
 
 
@@ -49,12 +50,8 @@ of regions of melting or mixed precipitation as opposed to heavy snow or heavy r
 
     print(__doc__)
 
-    # Author: Laura Tomkins (lmtomkin@ncsu.edu)
+    # Author: Laura Tomkins (lauramtomkins@gmail.com)
     # License: BSD 3 clause
-    # citation: Tomkins, L. M., Yuter, S. E., Miller, M. A., and Allen, L. R., 2022:
-    # Image muting of mixed precipitation to improve identification of regions
-    # of heavy snow in radar data. Atmos. Meas. Tech., 15, 5515–5525,
-    # https://doi.org/10.5194/amt-15-5515-2022
 
     import matplotlib.colors as mcolors
     import matplotlib.pyplot as plt
@@ -63,7 +60,7 @@ of regions of melting or mixed precipitation as opposed to heavy snow or heavy r
     import pyart
 
     # Read in file
-    nexrad_file = "s3://noaa-nexrad-level2/2020/02/07/KBGM/KBGM20200207_132642_V06"
+    nexrad_file = "s3://unidata-nexrad-level2/2020/02/07/KBGM/KBGM20200207_132642_V06"
     radar = pyart.io.read_nexrad_archive(nexrad_file)
 
     # Mute radar object
@@ -99,10 +96,17 @@ of regions of melting or mixed precipitation as opposed to heavy snow or heavy r
     ax.set_aspect("equal")
     plt.show()
 
+    # References
+    # ----------
+    # Tomkins, L. M., Yuter, S. E., Miller, M. A., and Allen, L. R., 2022:
+    # Image muting of mixed precipitation to improve identification of regions
+    # of heavy snow in radar data. Atmos. Meas. Tech., 15, 5515–5525,
+    # https://doi.org/10.5194/amt-15-5515-2022
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 5.454 seconds)
+   **Total running time of the script:** (0 minutes 3.715 seconds)
 
 
 .. _sphx_glr_download_examples_plotting_plot_nexrad_image_muted_reflectivity.py:
@@ -118,6 +122,10 @@ of regions of melting or mixed precipitation as opposed to heavy snow or heavy r
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_nexrad_image_muted_reflectivity.py <plot_nexrad_image_muted_reflectivity.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: plot_nexrad_image_muted_reflectivity.zip <plot_nexrad_image_muted_reflectivity.zip>`
 
 
 .. only:: html
