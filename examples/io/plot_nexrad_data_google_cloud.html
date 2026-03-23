@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Reading NEXRAD Data from Google Cloud &#8212; Py-ART 1.11.6 documentation</title>
   
@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -47,9 +47,9 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=7b255c20"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/documentation_options.js?v=0300ef54"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
@@ -545,7 +545,7 @@
 to download the full example code.</p>
 </div>
 <section class="sphx-glr-example-title" id="reading-nexrad-data-from-google-cloud">
-<span id="sphx-glr-examples-io-plot-nexrad-data-google-cloud-py"></span><h1>Reading NEXRAD Data from Google Cloud<a class="headerlink" href="#reading-nexrad-data-from-google-cloud" title="Permalink to this heading">#</a></h1>
+<span id="sphx-glr-examples-io-plot-nexrad-data-google-cloud-py"></span><h1>Reading NEXRAD Data from Google Cloud<a class="headerlink" href="#reading-nexrad-data-from-google-cloud" title="Link to this heading">#</a></h1>
 <p>Within this example, we show how you can remotely access Next Generation Weather Radar (NEXRAD) Data from Google Cloud Storage
 and plot quick looks of the datasets.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
@@ -563,7 +563,7 @@ and plot quick looks of the datasets.</p>
 </pre></div>
 </div>
 <section id="read-nexrad-level-2-data">
-<h2>Read NEXRAD Level 2 Data<a class="headerlink" href="#read-nexrad-level-2-data" title="Permalink to this heading">#</a></h2>
+<h2>Read NEXRAD Level 2 Data<a class="headerlink" href="#read-nexrad-level-2-data" title="Link to this heading">#</a></h2>
 <p>Let’s start first with NEXRAD Level 2 data, which is ground-based radar data collected
 by the National Oceanic and Atmospheric Administration (NOAA), as a part of the National Weather Service
 ### Configure our Filepath for NEXRAD Level 2 Data
@@ -601,7 +601,7 @@ on October 7, 2016, at 0401:25 UTC. This means our path would look like:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">radar</span><span class="o">.</span><span class="n">fields</span></a><span class="p">))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;spectrum_width&#39;, &#39;cross_correlation_ratio&#39;, &#39;differential_reflectivity&#39;, &#39;reflectivity&#39;, &#39;differential_phase&#39;, &#39;velocity&#39;]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;differential_phase&#39;, &#39;cross_correlation_ratio&#39;, &#39;reflectivity&#39;, &#39;spectrum_width&#39;, &#39;velocity&#39;, &#39;differential_reflectivity&#39;]
 </pre></div>
 </div>
 <p>Let’s plot the reflectivity field as a first step to investigating our dataset.</p>
@@ -612,7 +612,7 @@ on October 7, 2016, at 0401:25 UTC. This means our path would look like:</p>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_plot_nexrad_data_google_cloud_001.png" srcset="../../_images/sphx_glr_plot_nexrad_data_google_cloud_001.png" alt="KAMX 0.5 Deg. 2016-10-07T04:05:25Z  Equivalent reflectivity factor" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 35.784 seconds)</p>
+<img src="../../_images/sphx_glr_plot_nexrad_data_google_cloud_001.png" srcset="../../_images/sphx_glr_plot_nexrad_data_google_cloud_001.png" alt="KAMX 0.5 Deg. 2016-10-07T04:05:25Z  Equivalent reflectivity factor" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 28.066 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-io-plot-nexrad-data-google-cloud-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/bd7784cd354a6d9dd4cef7ee51e374f9/plot_nexrad_data_google_cloud.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_nexrad_data_google_cloud.ipynb</span></code></a></p>
@@ -716,7 +716,7 @@ on October 7, 2016, at 0401:25 UTC. This means our path would look like:</p>
 
   <p class="copyright">
     
-      © Copyright 2013-2024, Py-ART developers.
+      © Copyright 2013-2026, Py-ART developers.
       <br/>
     
   </p>
@@ -725,7 +725,7 @@ on October 7, 2016, at 0401:25 UTC. This means our path would look like:</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
     <br/>
   </p>
 </div>

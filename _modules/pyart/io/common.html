@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../../../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -46,9 +46,9 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=7b255c20"></script>
-    <script src="../../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../../_static/documentation_options.js?v=0300ef54"></script>
+    <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
@@ -471,7 +471,9 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 
-<div class="viewcode-block" id="prepare_for_read"><a class="viewcode-back" href="../../../API/generated/pyart.io.prepare_for_read.html#pyart.io.prepare_for_read">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">prepare_for_read</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;anon&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}):</span>
+<div class="viewcode-block" id="prepare_for_read">
+<a class="viewcode-back" href="../../../API/generated/pyart.io.prepare_for_read.html#pyart.io.prepare_for_read">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">prepare_for_read</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;anon&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Return a file like object read for reading.</span>
 
@@ -515,36 +517,98 @@
     <span class="p">)</span><span class="o">.</span><span class="n">open</span><span class="p">()</span></div>
 
 
+
 <span class="k">def</span><span class="w"> </span><span class="nf">stringarray_to_chararray</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">numchars</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Convert an string array to a character array with one extra dimension.</span>
+<span class="sd">    Convert a string array to a character array with one extra dimension.</span>
+
+<span class="sd">    Implementation that falls back to pure-numpy conversion if</span>
+<span class="sd">    netCDF4.stringtochar is unavailable or fails.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
-<span class="sd">    arr : array</span>
-<span class="sd">        Array with numpy dtype &#39;SN&#39;, where N is the number of characters</span>
-<span class="sd">        in the string.</span>
-
-<span class="sd">    numchars : int</span>
-<span class="sd">        Number of characters used to represent the string. If numchar &gt; N</span>
-<span class="sd">        the results will be padded on the right with blanks. The default,</span>
-<span class="sd">        None will use N.</span>
+<span class="sd">    arr : array-like</span>
+<span class="sd">        String or bytes array</span>
+<span class="sd">    numchars : int, optional</span>
+<span class="sd">        Fixed character width. Must be &gt;= actual max string length.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
-<span class="sd">    chararr : array</span>
-<span class="sd">        Array with dtype &#39;S1&#39; and shape = arr.shape + (numchars, ).</span>
-
+<span class="sd">    ndarray</span>
+<span class="sd">        Character array with dtype &#39;S1&#39; and shape (*arr.shape, numchars)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">carr</span> <span class="o">=</span> <span class="n">netCDF4</span><span class="o">.</span><span class="n">stringtochar</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">numchars</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">carr</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
 
-    <span class="n">arr_numchars</span> <span class="o">=</span> <span class="n">carr</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">numchars</span> <span class="o">&lt;=</span> <span class="n">arr_numchars</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;numchars must be &gt;= </span><span class="si">{</span><span class="n">arr_numchars</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="n">chararr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span> <span class="o">+</span> <span class="p">(</span><span class="n">numchars</span><span class="p">,),</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;S1&quot;</span><span class="p">)</span>
-    <span class="n">chararr</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="p">:</span><span class="n">arr_numchars</span><span class="p">]</span> <span class="o">=</span> <span class="n">carr</span><span class="p">[:]</span>
+    <span class="c1"># Handle scalar</span>
+    <span class="n">scalar</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">scalar</span><span class="p">:</span>
+        <span class="n">arr</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">1</span><span class="p">,))</span>
+
+    <span class="c1"># Handle masked arrays</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">isMaskedArray</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+        <span class="n">arr</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">filled</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Try netCDF4 first</span>
+    <span class="n">carr</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">carr</span> <span class="o">=</span> <span class="n">netCDF4</span><span class="o">.</span><span class="n">stringtochar</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+    <span class="k">except</span> <span class="p">(</span><span class="ne">ImportError</span><span class="p">,</span> <span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">Exception</span><span class="p">):</span>
+        <span class="k">pass</span>  <span class="c1"># Fall through to manual conversion</span>
+
+    <span class="c1"># Manual fallback</span>
+    <span class="k">if</span> <span class="n">carr</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">carr</span> <span class="o">=</span> <span class="n">_manual_string_to_char</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">numchars</span><span class="p">)</span>
+
+    <span class="c1"># Validate and pad if numchars specified</span>
+    <span class="k">if</span> <span class="n">numchars</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">arr_numchars</span> <span class="o">=</span> <span class="n">carr</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">numchars</span> <span class="o">&lt;</span> <span class="n">arr_numchars</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;numchars (</span><span class="si">{</span><span class="n">numchars</span><span class="si">}</span><span class="s2">) must be &gt;= actual width (</span><span class="si">{</span><span class="n">arr_numchars</span><span class="si">}</span><span class="s2">)&quot;</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="n">numchars</span> <span class="o">&gt;</span> <span class="n">arr_numchars</span><span class="p">:</span>
+            <span class="n">out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span> <span class="o">+</span> <span class="p">(</span><span class="n">numchars</span><span class="p">,),</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;S1&quot;</span><span class="p">)</span>
+            <span class="n">out</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="p">:</span><span class="n">arr_numchars</span><span class="p">]</span> <span class="o">=</span> <span class="n">carr</span>
+            <span class="n">carr</span> <span class="o">=</span> <span class="n">out</span>
+
+    <span class="c1"># Restore scalar shape</span>
+    <span class="k">if</span> <span class="n">scalar</span><span class="p">:</span>
+        <span class="n">carr</span> <span class="o">=</span> <span class="n">carr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">carr</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_manual_string_to_char</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">numchars</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Manual string-to-char conversion.&quot;&quot;&quot;</span>
+    <span class="c1"># Handle empty arrays</span>
+    <span class="k">if</span> <span class="n">arr</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">width</span> <span class="o">=</span> <span class="n">numchars</span> <span class="k">if</span> <span class="n">numchars</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span> <span class="o">+</span> <span class="p">(</span><span class="n">width</span><span class="p">,),</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;S1&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Encode to bytes</span>
+    <span class="n">flat</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+    <span class="n">encoded</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">flat</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="n">encoded</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">):</span>
+            <span class="n">encoded</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">encoded</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+
+    <span class="c1"># Determine width</span>
+    <span class="n">max_bytes</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">encoded</span><span class="p">)</span>
+    <span class="n">width</span> <span class="o">=</span> <span class="n">numchars</span> <span class="k">if</span> <span class="n">numchars</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_bytes</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Allocate and fill</span>
+    <span class="n">chararr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span> <span class="o">+</span> <span class="p">(</span><span class="n">width</span><span class="p">,),</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;S1&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndindex</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">),</span> <span class="n">encoded</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">width</span><span class="p">:</span>
+            <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">[:</span><span class="n">width</span><span class="p">]</span>  <span class="c1"># Truncate</span>
+        <span class="c1"># Use null padding for netCDF compatibility</span>
+        <span class="n">padded</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x00</span><span class="s2">&quot;</span> <span class="o">*</span> <span class="p">(</span><span class="n">width</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+        <span class="n">chararr</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="n">padded</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;S1&quot;</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="n">width</span><span class="p">)</span>
+
     <span class="k">return</span> <span class="n">chararr</span>
 
 
@@ -603,7 +667,7 @@
 
   <p class="copyright">
     
-      © Copyright 2013-2024, Py-ART developers.
+      © Copyright 2013-2026, Py-ART developers.
       <br/>
     
   </p>
@@ -612,7 +676,7 @@
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
     <br/>
   </p>
 </div>

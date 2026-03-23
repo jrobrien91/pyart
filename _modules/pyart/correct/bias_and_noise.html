@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../../../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -46,9 +46,9 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=7b255c20"></script>
-    <script src="../../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../../_static/documentation_options.js?v=0300ef54"></script>
+    <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
@@ -474,7 +474,9 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">..core.radar</span><span class="w"> </span><span class="kn">import</span> <span class="n">Radar</span>
 
 
-<div class="viewcode-block" id="correct_noise_rhohv"><a class="viewcode-back" href="../../../API/generated/pyart.correct.correct_noise_rhohv.html#pyart.correct.correct_noise_rhohv">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">correct_noise_rhohv</span><span class="p">(</span>
+<div class="viewcode-block" id="correct_noise_rhohv">
+<a class="viewcode-back" href="../../../API/generated/pyart.correct.correct_noise_rhohv.html#pyart.correct.correct_noise_rhohv">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">correct_noise_rhohv</span><span class="p">(</span>
     <span class="n">radar</span><span class="p">,</span>
     <span class="n">urhohv_field</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">snr_field</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -562,7 +564,10 @@
     <span class="k">return</span> <span class="n">rhohv</span></div>
 
 
-<div class="viewcode-block" id="correct_bias"><a class="viewcode-back" href="../../../API/generated/pyart.correct.correct_bias.html#pyart.correct.correct_bias">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">correct_bias</span><span class="p">(</span><span class="n">radar</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">field_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="correct_bias">
+<a class="viewcode-back" href="../../../API/generated/pyart.correct.correct_bias.html#pyart.correct.correct_bias">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">correct_bias</span><span class="p">(</span><span class="n">radar</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">field_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Corrects a radar data bias. If field name is none the correction is</span>
 <span class="sd">    applied to horizontal reflectivity by default.</span>
@@ -605,7 +610,10 @@
     <span class="k">return</span> <span class="n">corr_field</span></div>
 
 
-<div class="viewcode-block" id="calc_zdr_offset"><a class="viewcode-back" href="../../../API/generated/pyart.correct.calc_zdr_offset.html#pyart.correct.calc_zdr_offset">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">calc_zdr_offset</span><span class="p">(</span><span class="n">radar</span><span class="p">,</span> <span class="n">gatefilter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">height_range</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">zdr_var</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="calc_zdr_offset">
+<a class="viewcode-back" href="../../../API/generated/pyart.correct.calc_zdr_offset.html#pyart.correct.calc_zdr_offset">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">calc_zdr_offset</span><span class="p">(</span><span class="n">radar</span><span class="p">,</span> <span class="n">gatefilter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">height_range</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">zdr_var</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Function for calculating the ZDR bias from a VPT scan.</span>
 
@@ -661,7 +669,10 @@
     <span class="k">return</span> <span class="n">results</span></div>
 
 
-<div class="viewcode-block" id="calc_cloud_mask"><a class="viewcode-back" href="../../../API/generated/pyart.correct.calc_cloud_mask.html#pyart.correct.calc_cloud_mask">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">calc_cloud_mask</span><span class="p">(</span>
+
+<div class="viewcode-block" id="calc_cloud_mask">
+<a class="viewcode-back" href="../../../API/generated/pyart.correct.calc_cloud_mask.html#pyart.correct.calc_cloud_mask">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">calc_cloud_mask</span><span class="p">(</span>
     <span class="n">radar</span><span class="p">,</span>
     <span class="n">field</span><span class="p">,</span>
     <span class="n">height</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -761,7 +772,10 @@
     <span class="k">return</span> <span class="n">radar</span></div>
 
 
-<div class="viewcode-block" id="calc_noise_floor"><a class="viewcode-back" href="../../../API/generated/pyart.correct.calc_noise_floor.html#pyart.correct.calc_noise_floor">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">calc_noise_floor</span><span class="p">(</span><span class="n">radar</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+
+<div class="viewcode-block" id="calc_noise_floor">
+<a class="viewcode-back" href="../../../API/generated/pyart.correct.calc_noise_floor.html#pyart.correct.calc_noise_floor">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">calc_noise_floor</span><span class="p">(</span><span class="n">radar</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Calculation for getting the noise floor Note: This function has</span>
 <span class="sd">    only been tested on Ka-band ARM Zenith radars (KAZR) and will only work on cloud</span>
@@ -809,7 +823,10 @@
     <span class="k">return</span> <span class="n">noise</span></div>
 
 
-<div class="viewcode-block" id="cloud_threshold"><a class="viewcode-back" href="../../../API/generated/pyart.correct.cloud_threshold.html#pyart.correct.cloud_threshold">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">cloud_threshold</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">n_avg</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">nffts</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="cloud_threshold">
+<a class="viewcode-back" href="../../../API/generated/pyart.correct.cloud_threshold.html#pyart.correct.cloud_threshold">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">cloud_threshold</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">n_avg</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">nffts</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Calculates the noise floor from a cloud threshold. Note: This function has</span>
 <span class="sd">    only been tested on Ka-band ARM Zenith radars (KAZR) and will only work on cloud</span>
@@ -878,7 +895,10 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="range_correction"><a class="viewcode-back" href="../../../API/generated/pyart.correct.range_correction.html#pyart.correct.range_correction">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">range_correction</span><span class="p">(</span><span class="n">radar</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+
+<div class="viewcode-block" id="range_correction">
+<a class="viewcode-back" href="../../../API/generated/pyart.correct.range_correction.html#pyart.correct.range_correction">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">range_correction</span><span class="p">(</span><span class="n">radar</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Corrects reflectivity for range to help get the correct noise floor</span>
 <span class="sd">    values Note: This function has only been tested on Ka-band ARM Zenith</span>
@@ -938,6 +958,7 @@
     <span class="k">return</span> <span class="n">data</span></div>
 
 
+
 <span class="k">def</span><span class="w"> </span><span class="nf">_first_mask</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">noise_threshold</span><span class="p">):</span>
     <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int16</span><span class="p">)</span>
     <span class="n">mask</span><span class="p">[</span><span class="n">data</span> <span class="o">&gt;</span> <span class="n">noise_threshold</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
@@ -986,7 +1007,7 @@
 
   <p class="copyright">
     
-      © Copyright 2013-2024, Py-ART developers.
+      © Copyright 2013-2026, Py-ART developers.
       <br/>
     
   </p>
@@ -995,7 +1016,7 @@
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
     <br/>
   </p>
 </div>
